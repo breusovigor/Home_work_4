@@ -13,17 +13,18 @@
     setcookie('last', date('Y-m-d H:i:s'), time()+3600*24*31);
 } else {
     $last = 'Never';
+    setcookie('last', date('Y-m-d H:i:s'), time()+3600*24*31);
 }
 echo $last;*/
 
 // Task 3
-$counter = $_COOKIE['counter'];
 if (isset($_COOKIE['counter'])) {
     $counter = $_COOKIE['counter'];
+    $counter++;
 } else {
     $counter = 0;
 }
-$counter++;
+
 setcookie('counter', $counter);
 echo $counter;
 ?>
